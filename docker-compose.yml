@@ -81,7 +81,7 @@ services:
       com.datadoghq.ad.logs: '[{"source": "redis", "service": "redis"}]'
   notes:
     environment:
-      - FLASK_APP=thing.py
+      - FLASK_APP=notes.py
       - FLASK_DEBUG=1
       - POSTGRES_PASSWORD
       - POSTGRES_USER
