@@ -55,7 +55,7 @@ services:
       com.datadoghq.ad.logs: '[{"source": "nodejs", "service": "authentication-service"}]'
   image-clip:
     environment:
-      - FLASK_APP=sensors.py
+      - FLASK_APP=image-process.py
       - FLASK_DEBUG=1
       - POSTGRES_PASSWORD
       - POSTGRES_USER
@@ -68,7 +68,7 @@ services:
     ports:
       - "5001:5001"
     volumes:
-      - "./iot-devices:/app"
+      - "./image-clip-service:/app"
     depends_on:
       - frontend
       - agent
