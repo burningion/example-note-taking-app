@@ -34,7 +34,7 @@ services:
       - agent
       - db
     labels:
-      com.datadoghq.ad.logs: '[{"source": "python", "service": "iot-frontend"}]'
+      com.datadoghq.ad.logs: '[{"source": "python", "service": "note-frontend"}]'
   authentication:
     environment:
       - DD_SERVICE_NAME=authentication-service
@@ -73,7 +73,7 @@ services:
       - agent
       - db
     labels:
-      com.datadoghq.ad.logs: '[{"source": "python", "service": "pumps-service"}]'
+      com.datadoghq.ad.logs: '[{"source": "python", "service": "image-service"}]'
   redis:
     image: "redis:5.0-rc4-alpine"
     labels:
@@ -99,7 +99,7 @@ services:
       - agent
       - db
     labels:
-      com.datadoghq.ad.logs: '[{"source": "python", "service": "sensors-api"}]'
+      com.datadoghq.ad.logs: '[{"source": "python", "service": "notes-api"}]'
   db:
     image: postgres:11-alpine
     restart: always
